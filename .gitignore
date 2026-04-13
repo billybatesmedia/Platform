@@ -1,30 +1,44 @@
-# macOS
-.DS_Store
+# Default: ignore everything at repo root.
+/*
 
-# Local-only/site runtime config
-local-xdebuginfo.php
-wp-config.php
+# Keep repo meta and standards files.
+!/.gitignore
+!/.editorconfig
+!/README.md
 
-# WordPress core and runtime content
-wp-admin/
-wp-includes/
-wp-content/plugins/
-wp-content/mu-plugins/
-wp-content/uploads/
-wp-content/ai1wm-backups/
-wp-content/themes/twentytwentyfive/
+# Keep custom scripts/services at root.
+!/ChangeSiteDomainService.js
+!/SearchReplacerWPConfigDomain.js
 
-# Packaged artifacts
+# Keep project docs subtree, then narrow to maintained docs.
+!/Docs/
+/Docs/*
+!/Docs/template-system/
+/Docs/template-system/*
+!/Docs/template-system/README.md
+!/Docs/template-system/V1-DEFINITION-OF-DONE.md
+!/Docs/template-system/OPERATOR-CHECKLIST.md
+!/Docs/template-system/SERVICE-NAMING-CUT-LIST.md
+!/Docs/template-system/sample-payloads/
+!/Docs/template-system/sample-payloads/**
+!/Docs/template-system/evidence/
+/Docs/template-system/evidence/*
+!/Docs/template-system/evidence/README.md
+
+# Ignore generated artifact trees.
+/Docs/template-system/backups/
+/Docs/template-system/release-packets/
+
+# Keep only the custom theme source from wp-content.
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/lithia-web-service-theme/
+!/wp-content/themes/lithia-web-service-theme/**
+
+# Ignore packaged theme zips and common local noise.
+/wp-content/themes/*.zip
 *.zip
 *.crdownload
-
-# Generated evidence/build artifacts
-Docs/template-system/backups/
-Docs/template-system/release-packets/
-Docs/template-system/evidence/*.json
-Docs/template-system/evidence/*.tsv
-Docs/template-system/evidence/*.marker
-Docs/template-system/evidence/*window-*.txt
-Docs/template-system/evidence/*new-fatal-files.txt
-Docs/template-system/evidence/*summary.tsv
-
+.DS_Store
