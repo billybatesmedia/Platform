@@ -120,8 +120,26 @@ Supporting docs:
 - Operator checklist: `Docs/template-system/OPERATOR-CHECKLIST.md`
 - V1 done criteria: `Docs/template-system/V1-DEFINITION-OF-DONE.md`
 - Starter payload: `Docs/template-system/sample-payloads/service-business-v1-starter.json`
+- Site docs runbook (`/site-docs/`): `Docs/template-system/SITE-DOCS-RUNBOOK.md`
 
 This keeps V1 internal-assisted and avoids pretending the system is already a full client-facing portal.
+
+## Site Docs Library
+
+Client/admin documentation is published through the `site_docs` content model and rendered at:
+
+- `/site-docs/` (archive)
+- `/site-docs/<doc-slug>/` (single doc)
+
+Theme implementation references:
+
+- `wp-content/themes/lithia-web-service-theme/inc/site-docs.php`
+- `wp-content/themes/lithia-web-service-theme/templates/archive-site_docs.html`
+- `wp-content/themes/lithia-web-service-theme/templates/single-site_docs.html`
+
+Use the runbook for required categories, audience tags, and publishing workflow:
+
+- `Docs/template-system/SITE-DOCS-RUNBOOK.md`
 
 ## Intake Design Principles
 

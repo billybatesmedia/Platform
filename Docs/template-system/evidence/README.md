@@ -8,6 +8,7 @@ Current candidate status (2026-04-13):
 - Decision: `LAUNCH-READY`
 - Naming migration: `offer_*` compatibility retired from importer/project-admin read/write paths; canonical `service_*` naming is active.
 - Backfill status: one-time service meta backfill completed on 2026-04-13 (2 canonical keys added, 0 failures).
+- Docs status: docs pass completed, including `/site-docs/` runbook and operator checklist updates.
 - Gate check: [item-3d-v1-gate-check.json](/Users/billybates/Local_Sites/service-site/app/public/Docs/template-system/evidence/item-3d-v1-gate-check.json)
 - Handoff pack: [item-3e-release-candidate-handoff.md](/Users/billybates/Local_Sites/service-site/app/public/Docs/template-system/evidence/item-3e-release-candidate-handoff.md)
 - Launch state transition: [item-3f-launch-state-transition.md](/Users/billybates/Local_Sites/service-site/app/public/Docs/template-system/evidence/item-3f-launch-state-transition.md)

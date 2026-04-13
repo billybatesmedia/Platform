@@ -44,6 +44,25 @@ git add <targeted-files>
 git commit -m "Describe the change clearly"
 ```
 
+5. Push to GitHub:
+```bash
+git push origin main
+```
+
+## Git Sync Quick Commands
+
+```bash
+git fetch origin
+git status --short --branch
+git log --oneline --decorate -n 8
+```
+
+## Site Docs Workflow
+
+- Site docs publish surface: `/site-docs/`
+- Runbook: `Docs/template-system/SITE-DOCS-RUNBOOK.md`
+- Content model: `wp-content/themes/lithia-web-service-theme/inc/site-docs.php`
+
 ## Migration Utilities
 
 - Service meta backfill (dry-run):
@@ -55,4 +74,3 @@ bash wp-content/themes/lithia-web-service-theme/tests/run-service-meta-backfill.
 ```bash
 bash wp-content/themes/lithia-web-service-theme/tests/run-service-meta-backfill.sh /Users/billybates/Local_Sites/service-site/app/public apply
 ```
-

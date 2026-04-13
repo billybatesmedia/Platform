@@ -47,6 +47,20 @@ wp db export Docs/template-system/backups/$(date +%Y%m%d-%H%M%S)-before-import.s
 3. Run `Apply Import`.
 4. Set the site review state to `imported`.
 
+## New Site Creation Cycle (Full Pass)
+
+Use this sequence when validating a brand-new site creation cycle end-to-end:
+
+1. Complete intake fields in Launch Wizard or Project Manager.
+2. Confirm payload validation is clean and set payload review state to `approved`.
+3. Run dry-run import and review warnings.
+4. Apply import.
+5. Confirm site review state is `imported` immediately after apply.
+6. Complete manual QA/copy polish and move to `qa`.
+7. Move to `launched` before running final release readiness suite.
+
+Important: release suites expect `review_state = launched`. Running release checks while still `imported` will fail launch-state gates.
+
 ## QA
 
 1. Review the homepage, About, Contact, booking page, and service pages.
@@ -109,6 +123,14 @@ bash wp-content/themes/lithia-web-service-theme/tests/run-v1-gate-check.sh /User
 2. Run a final front-end check.
 3. Confirm the `V1 Done Gate` section above has passed.
 4. Move the site review state to `launched`.
+
+## Site Docs (/site-docs/) Pass
+
+1. Verify baseline docs are published in `Site Docs`.
+2. Verify `/site-docs/` archive and single docs render correctly.
+3. Confirm doc type/audience taxonomy assignments are correct.
+4. Update runbook references if any workflow changed:
+   - `Docs/template-system/SITE-DOCS-RUNBOOK.md`
 
 ## Deployment State Tracking (Phase 4 Baseline)
 
