@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"slug": "background",
+					"name": "Background",
+					"color": "#F7F4EE"
+				},
+				{
+					"slug": "surface",
+					"name": "Surface",
+					"color": "#EEE7DB"
+				},
+				{
+					"slug": "text",
+					"name": "Text",
+					"color": "#1F1F1F"
+				},
+				{
+					"slug": "primary",
+					"name": "Primary",
+					"color": "#2F4F46"
+				},
+				{
+					"slug": "accent",
+					"name": "Accent",
+					"color": "#B6864A"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "100%",
+			"wideSize": "100%"
+		},
+		"spacing": {
+			"padding": true,
+			"units": [
+				"px",
+				"rem",
+				"em",
+				"vw",
+				"%"
+			]
+		},
+		"typography": {
+			"dropCap": false,
+			"fluid": true,
+			"fontSizes": [
+				{
+					"slug": "xs",
+					"name": "XS",
+					"size": "0.9rem"
+				},
+				{
+					"slug": "sm",
+					"name": "S",
+					"size": "1rem"
+				},
+				{
+					"slug": "md",
+					"name": "M",
+					"size": "1.125rem"
+				},
+				{
+					"slug": "lg",
+					"name": "L",
+					"size": "1.5rem"
+				},
+				{
+					"slug": "xl",
+					"name": "XL",
+					"size": "clamp(2.75rem, 6vw, 4.75rem)"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
+}

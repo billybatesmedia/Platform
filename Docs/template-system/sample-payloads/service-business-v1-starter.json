@@ -1,0 +1,145 @@
+{
+  "project": {
+    "schema_version": "1.0.0",
+    "template_key": "service-business-v1",
+    "industry": "service-business",
+    "site_key": "starter-service-business",
+    "review_state": "intake"
+  },
+  "business": {
+    "brand_name": "Northfield Studio",
+    "business_type": "Creative service business",
+    "short_tagline": "Web design, content structure, and steady site support for local businesses.",
+    "email": "hello@northfieldstudio.com",
+    "phone": "503-555-0134",
+    "primary_cta_label": "Book Appointment",
+    "primary_cta_target": "/book-appointment/",
+    "secondary_cta_label": "Contact",
+    "secondary_cta_target": "/contact/"
+  },
+  "location": {
+    "city": "Portland",
+    "state_region": "Oregon",
+    "country": "US",
+    "service_area": [
+      "Portland",
+      "Beaverton",
+      "Lake Oswego"
+    ],
+    "delivery_modes": [
+      "in-person",
+      "remote"
+    ]
+  },
+  "audience": {
+    "primary_audiences": [
+      "small businesses",
+      "founders"
+    ]
+  },
+  "booking": {
+    "booking_mode": "consultation-first",
+    "calendar_enabled": false,
+    "booking_notice": "Every project starts with a short discovery call so the next step is clear before any build work begins."
+  },
+  "faq": [
+    {
+      "question": "Do you work with existing websites?",
+      "answer_seed": "Yes. Existing websites can be cleaned up, restructured, and improved without a full rebuild."
+    },
+    {
+      "question": "Do you support WooCommerce shops?",
+      "answer_seed": "Yes. WooCommerce setup, cleanup, and launch support are available when product sales are part of the project."
+    }
+  ],
+  "seo": {
+    "brand_keyword": "Northfield Studio",
+    "primary_terms": [
+      "WordPress website support Portland",
+      "small business website design Portland",
+      "WooCommerce setup Portland"
+    ],
+    "secondary_terms": [
+      "existing site work",
+      "website consultation"
+    ],
+    "locations": [
+      "Portland",
+      "Beaverton"
+    ],
+    "tone": "clear and professional"
+  },
+  "pages": [
+    {
+      "record_key": "page_home",
+      "page_role": "home",
+      "title": "Home",
+      "slug": "home",
+      "excerpt": "Northfield Studio helps small businesses with WordPress websites, structured content, and steady support in Portland."
+    },
+    {
+      "record_key": "page_about",
+      "page_role": "about",
+      "title": "About",
+      "slug": "about",
+      "excerpt": "Learn how Northfield Studio plans, builds, and supports practical WordPress websites for small businesses."
+    },
+    {
+      "record_key": "page_contact",
+      "page_role": "contact",
+      "title": "Contact",
+      "slug": "contact",
+      "excerpt": "Contact Northfield Studio to talk through your site goals, current issues, or next phase."
+    },
+    {
+      "record_key": "page_booking",
+      "page_role": "booking",
+      "title": "Book Appointment",
+      "slug": "book-appointment",
+      "excerpt": "Book a discovery call to discuss the right next move for your website."
+    },
+    {
+      "record_key": "page_platform",
+      "page_role": "platform",
+      "title": "Platform",
+      "slug": "platform",
+      "excerpt": "See how the Northfield Studio platform keeps WordPress sites structured, maintainable, and easier to improve."
+    }
+  ],
+  "providers": [
+    {
+      "record_key": "provider_billy",
+      "title": "Billy",
+      "slug": "billy",
+      "excerpt": "Project lead and primary point of contact."
+    }
+  ],
+  "offers": [
+    {
+      "record_key": "service_existing_site_work",
+      "title": "Existing Site Work",
+      "slug": "existing-site-work",
+      "summary": "Cleanup, messaging fixes, layout adjustments, and practical SEO work for websites that already exist.",
+      "delivery_mode": "remote",
+      "duration": "2-4 weeks",
+      "cta_label": "Book Existing Site Work",
+      "cta_target": "/book-appointment/",
+      "provider_slugs": [
+        "billy"
+      ]
+    },
+    {
+      "record_key": "service_full_site_build",
+      "title": "Full Site Build",
+      "slug": "full-site-build",
+      "summary": "A full WordPress site build for businesses that need structure, launch-ready content, and a clean publishing system.",
+      "delivery_mode": "remote",
+      "duration": "4-8 weeks",
+      "cta_label": "Book Full Site Build",
+      "cta_target": "/book-appointment/",
+      "provider_slugs": [
+        "billy"
+      ]
+    }
+  ]
+}

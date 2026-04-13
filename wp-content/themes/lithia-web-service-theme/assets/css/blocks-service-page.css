@@ -1,0 +1,1154 @@
+.wp-block-lithia-service-page.lithia-service-page-block {
+	display: block;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block > section:not(:first-child) {
+	margin: clamp(10px, 1.4vw, 18px);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: clamp(420px, 58vh, 640px);
+	padding: max(calc(var(--lw-section-padding-y) * 0.82), 2.75rem) 0;
+	background-color: var(--lw-color-dark-bg);
+	background-image: var(--lithia-service-hero-image, none);
+	background-position: center calc(50% + var(--lithia-service-hero-shift, 0px));
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: clip;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero.has-parallax {
+	will-change: background-position;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 44%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.92fr);
+	gap: calc(var(--lw-block-gap) * 1.15);
+	align-items: stretch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__content {
+	display: grid;
+	align-content: start;
+	gap: 0.9rem;
+	max-width: min(680px, 100%);
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__content > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__content > * + * {
+	margin-top: 0.85rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero + .lithia-service-overview.lithia-section {
+	margin-top: clamp(10px, 1.4vw, 18px);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__title {
+	max-width: 14ch;
+	line-height: 0.98;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__text {
+	max-width: 56ch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero.has-booking .lithia-service-hero__content {
+	max-width: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking {
+	display: grid;
+	align-content: start;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-card {
+	display: grid;
+	align-content: start;
+	gap: 0.85rem;
+	height: 100%;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-card > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-heading {
+	margin: 0;
+	font-size: clamp(1.35rem, 2vw, 1.8rem);
+	line-height: 1.02;
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-copy {
+	max-width: none;
+	color: color-mix(in srgb, var(--lw-color-dark-text) 84%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-copy > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-copy > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-actions .lithia-button-link {
+	width: 100%;
+	justify-content: center;
+}
+
+.has-lithia-service-drawer-open {
+	overflow: hidden;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	align-items: stretch;
+	justify-items: end;
+	pointer-events: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer:not([hidden]) {
+	pointer-events: auto;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer[hidden] {
+	display: none;
+	pointer-events: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(18, 24, 23, 0.56);
+	opacity: 0;
+	transition: opacity 0.22s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__panel {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-rows: auto auto minmax(0, 1fr);
+	gap: 1rem;
+	width: min(460px, 100vw);
+	height: 100%;
+	padding: clamp(1rem, 2vw, 1.4rem);
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 96%, #000000);
+	box-shadow: -24px 0 50px rgba(0, 0, 0, 0.22);
+	color: var(--lw-color-dark-text);
+	overflow-y: auto;
+	transform: translateX(100%);
+	transition: transform 0.22s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer.is-open .lithia-service-drawer__backdrop {
+	opacity: 1;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer.is-open .lithia-service-drawer__panel {
+	transform: translateX(0);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__header {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__header-copy {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__header-copy > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__title {
+	margin: 0;
+	font-size: clamp(1.45rem, 2.2vw, 2rem);
+	line-height: 1.02;
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	background: color-mix(in srgb, var(--lw-color-dark-text) 8%, transparent);
+	border: 1px solid color-mix(in srgb, var(--lw-color-dark-text) 14%, transparent);
+	border-radius: 999px;
+	color: var(--lw-color-dark-text);
+	font-size: 1.4rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__intro {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 82%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__intro > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__intro > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__body {
+	min-height: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__body .lithia-service-booking__widget {
+	box-shadow: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.95fr) minmax(280px, 0.95fr);
+	gap: calc(var(--lw-block-gap) * 1.2);
+	align-items: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__content,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar-inner {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 0.95);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__content,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar {
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar {
+	position: sticky;
+	top: 30px;
+	padding-top: 25px;
+	align-self: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar-inner {
+	position: sticky;
+	top: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__panel {
+	display: grid;
+	gap: 0.9rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__panel > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc__inner {
+	background: color-mix(in srgb, var(--lw-color-accent) 8%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc {
+	background: color-mix(in srgb, var(--lw-color-accent) 8%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide {
+	display: grid;
+	gap: 0.95rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-title {
+	margin: 0;
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: 1.02;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-nav,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-items {
+	display: grid;
+	gap: 0.95rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item + .lithia-service-sidebar__page-guide-item {
+	padding-top: 0.95rem;
+	border-top: 1px solid var(--lw-color-border);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-link,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child-link {
+	display: block;
+	position: relative;
+	padding-left: 0.85rem;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-link {
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-size: 1rem;
+	font-weight: var(--lw-font-weight-heading);
+	line-height: 1.18;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-link::before,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child-link::before {
+	content: "";
+	position: absolute;
+	top: 0.18em;
+	bottom: 0.18em;
+	left: 0;
+	width: 2px;
+	border-radius: 999px;
+	background: transparent;
+	transition: background-color 0.2s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item.is-active > .lithia-service-sidebar__page-guide-link,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item.has-active-child > .lithia-service-sidebar__page-guide-link,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child-link.is-active {
+	color: var(--lw-color-secondary);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item.is-active > .lithia-service-sidebar__page-guide-link::before,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item.has-active-child > .lithia-service-sidebar__page-guide-link::before,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child-link.is-active::before {
+	background: var(--lw-color-accent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-details {
+	display: grid;
+	gap: 0.55rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-summary {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	color: var(--lw-color-muted-text);
+	cursor: pointer;
+	font-size: 0.82rem;
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	list-style: none;
+	text-transform: uppercase;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-item.has-active-child .lithia-service-sidebar__page-guide-summary {
+	color: var(--lw-color-secondary);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-summary::-webkit-details-marker {
+	display: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-summary::before {
+	content: "";
+	width: 0.45rem;
+	height: 0.45rem;
+	border-right: 1.5px solid currentColor;
+	border-bottom: 1.5px solid currentColor;
+	transform: rotate(45deg);
+	transform-origin: center;
+	transition: transform 0.2s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-details[open] > .lithia-service-sidebar__page-guide-summary::before {
+	transform: rotate(-135deg) translateY(-1px);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-children {
+	display: grid;
+	gap: 0.55rem;
+	margin: 0;
+	padding: 0 0 0 1rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child {
+	margin: 0;
+	color: var(--lw-color-muted-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-guide-child-link {
+	color: inherit;
+	font-size: 0.94rem;
+	line-height: 1.35;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-header {
+	display: grid;
+	gap: 0.45rem;
+	background: color-mix(in srgb, var(--lw-color-primary) 10%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-header > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__page-title {
+	margin: 0;
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-size: clamp(1.3rem, 1.9vw, 1.7rem);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: 1.02;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block > * + * {
+	margin-top: 1rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block > * + * {
+	margin-top: 0.9rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block h2 {
+	font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block h2 {
+	font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block nav ul {
+	display: grid;
+	gap: 0.65rem;
+	margin: 0;
+	padding-left: 1.2rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block nav ul {
+	display: grid;
+	gap: 0.55rem;
+	margin: 0;
+	padding-left: 1.05rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block nav ul ul {
+	margin-top: 0.45rem;
+	padding-left: 1rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block nav ul ul {
+	margin-top: 0.35rem;
+	padding-left: 0.9rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block nav li {
+	margin: 0;
+	color: var(--lw-color-muted-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block nav li {
+	margin: 0;
+	color: var(--lw-color-muted-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-toc .wp-block-rank-math-toc-block a {
+	text-decoration: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__toc .wp-block-rank-math-toc-block a {
+	text-decoration: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__accordion {
+	overflow: hidden;
+	padding: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__accordion-item + .lithia-service-sidebar__accordion-item {
+	border-top: 1px solid var(--lw-color-border);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.85rem;
+	padding: 1rem 1.05rem;
+	color: var(--lw-color-primary);
+	cursor: pointer;
+	font-family: var(--lw-font-body);
+	font-size: 0.98rem;
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.01em;
+	list-style: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__summary::-webkit-details-marker {
+	display: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__summary::after {
+	content: "";
+	width: 0.55rem;
+	height: 0.55rem;
+	border-right: 1.5px solid currentColor;
+	border-bottom: 1.5px solid currentColor;
+	transform: rotate(45deg);
+	transform-origin: center;
+	transition: transform 0.2s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__accordion-item[open] > .lithia-service-sidebar__summary::after {
+	transform: rotate(-135deg) translateY(-1px);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__panel {
+	padding: 0 1.05rem 1.05rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.75rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail {
+	display: grid;
+	gap: 0.25rem;
+	padding: 0.8rem 0.85rem;
+	background: color-mix(in srgb, var(--lw-color-light-bg) 72%, #ffffff);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-label,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-value {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-label {
+	color: var(--lw-color-muted-text);
+	font-size: 0.78rem;
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-value {
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-size: 1.05rem;
+	line-height: 1.15;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack {
+	display: grid;
+	gap: 0.95rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack-item {
+	display: grid;
+	gap: 0.35rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack-item + .lithia-service-sidebar__stack-item {
+	padding-top: 0.95rem;
+	border-top: 1px solid var(--lw-color-border);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack-title,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step-title {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.15;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack-text > :first-child,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step-text > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__stack-text > :last-child,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step-text > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__steps {
+	display: grid;
+	gap: 0.95rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 0.75rem;
+	align-items: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--lw-color-accent) 16%, var(--lw-color-surface));
+	color: var(--lw-color-primary);
+	font-size: 0.75rem;
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__step-body {
+	display: grid;
+	gap: 0.3rem;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block :is(section, details, h2, h3, h4, h5, h6)[id] {
+	scroll-margin-top: 8rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-details__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+	gap: calc(var(--lw-block-gap) * 0.9);
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-detail {
+	display: grid;
+	gap: 0.4rem;
+	align-content: start;
+	align-self: start;
+	height: auto;
+	min-width: 0;
+	overflow: hidden;
+	padding: clamp(0.8rem, 1.15vw, 1rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-detail__label,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-detail__value {
+	margin: 0;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-detail__value {
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-size: clamp(1rem, 1.35vw, 1.15rem);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: 1.2;
+	overflow-wrap: anywhere;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-section-heading {
+	display: grid;
+	gap: 0.65rem;
+	margin-bottom: calc(var(--lw-block-gap) * 0.9);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-section-heading > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__grid {
+	display: grid;
+	grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.18fr);
+	gap: calc(var(--lw-block-gap) * 1.35);
+	align-items: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__header,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__body {
+	display: grid;
+	gap: 0.8rem;
+	align-content: start;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__body {
+	max-width: 62ch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__header > *,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__body > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-highlights__grid,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-process__steps {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: calc(var(--lw-block-gap) * 0.9);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-card,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-step {
+	display: grid;
+	gap: 0.7rem;
+	align-content: start;
+	align-self: start;
+	height: auto;
+	min-height: 0;
+	padding: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-card__title,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-step__title {
+	margin: 0;
+	font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-step {
+	grid-template-rows: auto auto auto;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-step__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--lw-color-accent) 16%, var(--lw-color-surface));
+	color: var(--lw-color-primary);
+	font-size: 0.85rem;
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content {
+	gap: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__sections {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 0.9);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section {
+	display: grid;
+	gap: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section:nth-child(even) {
+	background: color-mix(in srgb, var(--lw-color-light-bg) 84%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-grid {
+	display: block;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-grid.is-intro {
+	display: block;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-header,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body {
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-header {
+	margin-bottom: calc(var(--lw-block-gap) * 0.8);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-header :is(h2, h3, h4, h5, h6) {
+	margin: 0;
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body {
+	max-width: 62ch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section.is-intro .lithia-service-content__section-body {
+	max-width: 72ch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body > * + * {
+	margin-top: clamp(0.95rem, 1.4vw, 1.15rem);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body > :is(h3, h4, h5, h6) {
+	margin-top: clamp(1.35rem, 2vw, 1.8rem);
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-body > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__inner {
+	background: color-mix(in srgb, var(--lw-color-secondary) 18%, var(--lw-color-dark-bg));
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 18%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: calc(var(--lw-block-gap) * 1.15);
+	align-items: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__grid > * {
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__content {
+	display: grid;
+	gap: 0.85rem;
+	align-content: start;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__content > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__note {
+	max-width: 58ch;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget {
+	display: grid;
+	align-content: start;
+	gap: 0.85rem;
+	min-width: 0;
+	width: 100%;
+	max-width: none;
+	padding: 0;
+	justify-self: stretch;
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 94%, var(--lw-color-secondary));
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 16%, transparent);
+	color: var(--lw-color-dark-text);
+	overflow: visible;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget-inner,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget-inner form {
+	display: grid;
+	gap: 0.85rem;
+	min-width: 0;
+	width: 100%;
+	max-width: none;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-fb-form-block,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder-row,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-wrapper,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .appointment-calendar,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .vc-container,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .vc-pane-container,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .vc-pane-layout {
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder-row {
+	display: grid;
+	gap: 0.45rem;
+	align-content: start;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder__field-wrap {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget :is(label, .jet-form-builder__label) {
+	display: block;
+	margin-bottom: 0;
+	color: var(--lw-color-dark-text);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.02em;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget :is(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), select, textarea) {
+	width: 100%;
+	max-width: 100%;
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 88%, #000000);
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 18%, transparent);
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget :is(button, input[type="submit"], .jet-form-builder__submit) {
+	width: 100%;
+	max-width: 100%;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget :is(input, select, textarea)::placeholder {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 68%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder__fields-group {
+	display: grid;
+	gap: 1rem;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-wrapper {
+	overflow-x: auto;
+	overflow-y: visible;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .vc-container {
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 88%, #000000);
+	color: var(--lw-color-dark-text);
+	border-radius: var(--lw-radius-md);
+	overflow: hidden;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-appointments-list-wrapper,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-appointments-list,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-notification {
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder__label-text,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-form-builder__heading,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-content,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-header,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-header__label,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-week span,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-slot,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-appointments-item,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-item-service-provider,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-notification {
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-content {
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 88%, #000000);
+	border: 1px solid color-mix(in srgb, var(--lw-color-dark-text) 14%, transparent);
+	border-radius: var(--lw-radius-md);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-header {
+	border-bottom: 1px solid color-mix(in srgb, var(--lw-color-dark-text) 10%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-btn:hover {
+	color: color-mix(in srgb, var(--lw-color-accent) 74%, var(--lw-color-dark-text));
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-week span {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 74%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-date-body {
+	padding: 0.5rem 0;
+	border-radius: calc(var(--lw-radius-sm) + 2px);
+	color: var(--lw-color-dark-text);
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-date:not(.jet-apb-calendar-date--disabled):hover .jet-apb-calendar-date-body,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-date--active .jet-apb-calendar-date-body,
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-date--today .jet-apb-calendar-date-body {
+	background: color-mix(in srgb, var(--lw-color-accent) 24%, var(--lw-color-dark-bg));
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-date--disabled .jet-apb-calendar-date-body {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 36%, transparent);
+}
+
+.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget .jet-apb-calendar-notification {
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 92%, #000000);
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block {
+	display: block;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block > section:not(:first-child) {
+	margin: clamp(10px, 1.4vw, 18px);
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1.08fr);
+	gap: calc(var(--lw-block-gap) * 1.1);
+	align-items: stretch;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__media {
+	min-width: 0;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: clamp(240px, 30vw, 360px);
+	object-fit: cover;
+	border-radius: var(--lw-radius-lg);
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__content {
+	display: grid;
+	gap: 0.85rem;
+	align-content: center;
+	min-width: 0;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__content > * {
+	margin: 0;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-content__body > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-content__body > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-related__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--lw-block-gap);
+}
+
+.editor-styles-wrapper .lithia-provider-page-preview,
+.editor-styles-wrapper .lithia-service-page-preview {
+	margin-top: var(--lw-block-gap);
+}
+
+.editor-styles-wrapper .lithia-service-page-block .lithia-service-hero {
+	margin-top: 1rem;
+}
+
+@media (max-width: 960px) {
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__grid,
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-content__section-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar-inner {
+		position: static;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-main__sidebar {
+		position: static;
+		top: auto;
+		padding-top: 0;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero__booking-card {
+		height: auto;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__panel {
+		width: min(100vw, 440px);
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-highlights__grid,
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-process__steps {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-booking__widget {
+		width: 100%;
+		max-width: none;
+		justify-self: stretch;
+	}
+
+	.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-hero__grid,
+	.wp-block-lithia-provider-page.lithia-provider-page-block .lithia-provider-related__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 781px) {
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-drawer__panel {
+		width: 100vw;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-sidebar__detail-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-overview__grid,
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-highlights__grid,
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-process__steps {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-service-page.lithia-service-page-block .lithia-service-hero {
+		min-height: auto;
+		padding: max(calc(var(--lw-section-padding-y) * 0.72), 2rem) 0;
+	}
+}

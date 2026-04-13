@@ -1,0 +1,78 @@
+.wp-block-lithia-svg-background.lithia-svg-background {
+	position: relative;
+	display: flex;
+	align-items: center;
+	isolation: isolate;
+	width: 100%;
+	min-height: var(--lithia-svg-background-min-height, clamp(420px, 58vh, 760px));
+	padding: max(var(--lw-section-padding-y), 4rem) 0;
+	overflow: clip;
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background.lw-section-light {
+	background: var(--lw-color-light-bg);
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background.lw-section-dark {
+	background: var(--lw-color-dark-bg);
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__media {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	opacity: var(--lithia-svg-background-opacity, 0.44);
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__svg,
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__media-preview {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: scale(var(--lithia-svg-background-scale, 1));
+	transform-origin: center;
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__media-preview {
+	object-fit: cover;
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__inner {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__content {
+	display: grid;
+	gap: var(--lw-block-gap);
+}
+
+.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__content > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.editor-styles-wrapper .lithia-svg-background__editor-note {
+	margin: 0;
+	font-size: var(--lw-font-size-small);
+	color: var(--lw-color-muted-text);
+}
+
+.editor-styles-wrapper .lithia-svg-background-editor-image {
+	margin-bottom: 1rem;
+	border-radius: var(--lw-radius-lg);
+	overflow: hidden;
+}
+
+.editor-styles-wrapper .wp-block-lithia-svg-background .block-editor-block-list__layout > * + * {
+	margin-top: var(--lw-block-gap);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-lithia-svg-background.lithia-svg-background .lithia-svg-background__media {
+		opacity: calc(var(--lithia-svg-background-opacity, 0.44) * 0.75);
+	}
+}

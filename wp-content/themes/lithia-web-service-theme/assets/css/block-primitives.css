@@ -1,0 +1,279 @@
+.lithia-shell {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-inline: auto;
+}
+
+.lithia-surface {
+	background: var(--lw-color-surface);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-panel);
+	color: var(--lw-color-text);
+}
+
+.lithia-section {
+	margin-block: var(--lw-section-padding-y);
+}
+
+.lithia-section > .lithia-shell {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+}
+
+.lithia-surface--padded {
+	padding: var(--lw-section-padding-y) var(--lw-section-padding-x);
+}
+
+.lithia-surface--glass {
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 18%, transparent);
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 84%, transparent);
+	box-shadow: var(--lw-shadow-panel);
+	color: var(--lw-color-dark-text);
+	backdrop-filter: blur(14px);
+}
+
+.lithia-eyebrow {
+	margin: 0 0 0.85rem;
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--lw-color-primary);
+}
+
+.lithia-eyebrow--light {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 82%, transparent);
+}
+
+.lithia-heading-xl,
+.lithia-heading-hero {
+	margin: 0;
+	font-family: var(--lw-font-heading);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+}
+
+.lithia-heading-xl {
+	font-size: var(--lw-font-size-h2);
+	color: var(--lw-color-primary);
+}
+
+.lithia-heading-hero {
+	font-size: var(--lw-font-size-h1);
+	color: var(--lw-color-dark-text);
+}
+
+.lithia-subheading {
+	margin: 0.65rem 0 0;
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--lw-color-secondary);
+}
+
+.lithia-subheading--light {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 84%, transparent);
+}
+
+.lithia-copy {
+	max-width: 60ch;
+	color: var(--lw-color-muted-text);
+}
+
+.lithia-copy :where(p, li, dd, figcaption, cite) {
+	color: inherit;
+}
+
+.lithia-copy--light {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 94%, transparent);
+}
+
+.lithia-copy p,
+.lithia-display-statement p {
+	margin: 0;
+}
+
+.lithia-display-statement :where(p, li, dd, figcaption, cite) {
+	color: inherit;
+}
+
+.lithia-display-statement {
+	max-width: 24ch;
+	font-family: var(--lw-font-heading);
+	font-size: var(--lw-font-size-h2);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+	letter-spacing: -0.03em;
+	color: var(--lw-color-primary);
+}
+
+.lithia-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--lw-block-gap);
+	margin-top: var(--lw-block-gap);
+}
+
+.lithia-actions--center {
+	justify-content: center;
+}
+
+.lithia-button-link,
+a.lithia-button-link,
+.wp-element-button.lithia-button-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--lw-button-padding-y) var(--lw-button-padding-x);
+	border: 1px solid var(--lw-button-border);
+	border-radius: var(--lw-button-radius);
+	background: var(--lw-button-bg);
+	box-shadow: var(--lw-shadow-soft);
+	color: var(--lw-button-text);
+	font-size: var(--lw-button-font-size);
+	font-weight: var(--lw-button-font-weight);
+	line-height: 1.2;
+	text-decoration: none;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.lithia-button-link:hover,
+a.lithia-button-link:hover,
+.wp-element-button.lithia-button-link:hover {
+	background: var(--lw-color-secondary);
+	border-color: var(--lw-color-secondary);
+	color: var(--lw-button-text);
+	transform: translateY(-1px);
+}
+
+.lithia-button-link--secondary,
+a.lithia-button-link--secondary,
+.wp-element-button.lithia-button-link--secondary {
+	background: transparent;
+	border-color: var(--lw-color-border);
+	box-shadow: none;
+	color: var(--lw-color-primary);
+}
+
+.lithia-button-link--secondary:hover,
+a.lithia-button-link--secondary:hover,
+.wp-element-button.lithia-button-link--secondary:hover {
+	background: color-mix(in srgb, var(--lw-color-accent) 12%, var(--lw-color-light-bg));
+	border-color: var(--lw-color-accent);
+	color: var(--lw-color-primary);
+}
+
+.lithia-button-link--light,
+a.lithia-button-link--light,
+.wp-element-button.lithia-button-link--light {
+	background: var(--lw-color-light-bg);
+	border-color: var(--lw-color-light-bg);
+	color: var(--lw-color-dark-bg);
+}
+
+.lithia-button-link--light:hover,
+a.lithia-button-link--light:hover,
+.wp-element-button.lithia-button-link--light:hover {
+	background: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	border-color: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	color: var(--lw-color-dark-bg);
+}
+
+.lithia-tone-light .lithia-heading-hero {
+	color: var(--lw-color-text);
+}
+
+.lithia-tone-dark .lithia-surface:not(.lithia-surface--glass) {
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 92%, var(--lw-color-secondary));
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 16%, transparent);
+	color: var(--lw-color-dark-text);
+}
+
+.lithia-tone-dark .lithia-surface--glass {
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 84%, transparent);
+}
+
+.lithia-tone-dark :is(.lithia-heading-xl, .lithia-display-statement) {
+	color: var(--lw-color-dark-text);
+}
+
+.lithia-tone-dark .lithia-heading-hero {
+	color: var(--lw-color-dark-text);
+}
+
+.lithia-tone-dark .lithia-eyebrow {
+	color: color-mix(in srgb, var(--lw-color-accent) 78%, var(--lw-color-dark-text));
+}
+
+.lithia-tone-dark .lithia-subheading,
+.lithia-tone-dark .lithia-copy {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 90%, transparent);
+}
+
+.lithia-tone-dark .lithia-button-link {
+	background: var(--lw-color-light-bg);
+	border-color: var(--lw-color-light-bg);
+	box-shadow: none;
+	color: var(--lw-color-dark-bg);
+}
+
+.lithia-tone-dark .lithia-button-link:hover {
+	background: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	border-color: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	color: var(--lw-color-dark-bg);
+}
+
+.lithia-tone-dark .lithia-button-link--secondary {
+	background: transparent;
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 22%, transparent);
+	color: var(--lw-color-dark-text);
+}
+
+.lithia-tone-dark .lithia-button-link--secondary:hover {
+	background: color-mix(in srgb, var(--lw-color-dark-text) 10%, transparent);
+	border-color: color-mix(in srgb, var(--lw-color-accent) 74%, var(--lw-color-dark-text));
+	color: var(--lw-color-dark-text);
+}
+
+.lw-section-light {
+	background: var(--lw-color-light-bg);
+	color: var(--lw-color-light-text);
+}
+
+.lw-section-dark {
+	background: var(--lw-color-dark-bg);
+	color: var(--lw-color-dark-text);
+}
+
+.lw-section-light :is(p, li, dt, dd, blockquote, figcaption),
+.lw-section-dark :is(p, li, dt, dd, blockquote, figcaption) {
+	color: inherit;
+}
+
+.lw-section-light :is(h1, h2, h3, h4, h5, h6) {
+	color: var(--lw-color-primary);
+}
+
+.lw-section-dark :is(h1, h2, h3, h4, h5, h6) {
+	color: var(--lw-color-dark-text);
+}
+
+.lw-section-light a {
+	color: var(--lw-color-primary);
+}
+
+.lw-section-dark a {
+	color: var(--lw-color-accent);
+}
+
+.lw-section-dark :is(.lithia-button-link, .wp-block-button__link, button, input[type="submit"], .wc-block-components-button, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button) {
+	background: var(--lw-color-light-bg);
+	border-color: var(--lw-color-light-bg);
+	color: var(--lw-color-dark-bg);
+}
+
+.lw-section-dark :is(.lithia-button-link, .wp-block-button__link, button, input[type="submit"], .wc-block-components-button, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button):hover {
+	background: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	border-color: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	color: var(--lw-color-dark-bg);
+}

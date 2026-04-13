@@ -1,0 +1,23 @@
+.lithia-services-inline-edit .lithia-services-inline-edit__providers {
+	display: grid;
+	gap: 0.35rem;
+	max-height: 10rem;
+	overflow: auto;
+	margin-top: 0.45rem;
+	padding-right: 0.35rem;
+}
+
+.lithia-services-inline-edit .lithia-services-inline-edit__provider {
+	display: flex;
+	gap: 0.45rem;
+	align-items: center;
+}
+
+.column-lithia_service_price,
+.column-lithia_service_homepage {
+	width: 10%;
+}
+
+.column-lithia_service_providers {
+	width: 18%;
+}

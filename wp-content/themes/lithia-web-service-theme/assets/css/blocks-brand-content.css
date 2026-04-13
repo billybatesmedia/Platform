@@ -1,0 +1,496 @@
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__inner {
+	background: color-mix(in srgb, var(--lw-color-primary) 14%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement.lithia-tone-dark .lithia-mission-statement__inner {
+	background: color-mix(in srgb, var(--lw-color-secondary) 14%, var(--lw-color-dark-bg));
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__content {
+	display: grid;
+	gap: var(--lw-block-gap);
+	align-content: center;
+	min-width: 0;
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__content > * {
+	margin: 0;
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__text {
+	max-width: none;
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__inner.has-mission-image {
+	display: grid;
+	grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.15fr);
+	gap: calc(var(--lw-block-gap) * 2);
+	align-items: stretch;
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__media {
+	overflow: hidden;
+	border-radius: var(--lw-radius-lg);
+	min-height: 100%;
+}
+
+.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__inner {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 2);
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__inner.has-about-image {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	align-items: start;
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__body {
+	display: grid;
+	gap: var(--lw-block-gap);
+	align-content: start;
+	min-width: 0;
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__body > * {
+	margin: 0;
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__media {
+	overflow: hidden;
+	border-radius: var(--lw-radius-lg);
+}
+
+.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.wp-block-lithia-brand-cta-pair.lithia-brand-cta-pair .lithia-brand-cta-pair__inner {
+	padding: calc(var(--lw-section-padding-y) * 0.45) var(--lw-section-padding-x);
+	background: color-mix(in srgb, var(--lw-color-accent) 10%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-brand-cta-pair.lithia-brand-cta-pair.lithia-tone-dark .lithia-brand-cta-pair__inner {
+	background: color-mix(in srgb, var(--lw-color-accent) 10%, var(--lw-color-dark-bg));
+}
+
+.wp-block-lithia-brand-cta-pair.lithia-brand-cta-pair .lithia-brand-cta-pair__actions {
+	margin-top: 0;
+	justify-content: center;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__frame {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 1.35);
+	background: color-mix(in srgb, var(--lw-color-primary) 10%, var(--lw-color-surface));
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop.lithia-tone-dark .lithia-service-spotlight-loop__frame {
+	background: color-mix(in srgb, var(--lw-color-secondary) 18%, var(--lw-color-dark-bg));
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__header-copy {
+	display: grid;
+	gap: 0.85rem;
+	max-width: 44rem;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__heading {
+	max-width: 18ch;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__header-copy > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__viewport {
+	position: relative;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__slide {
+	display: none;
+	grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
+	gap: calc(var(--lw-block-gap) * 1.5);
+	align-items: stretch;
+	padding-top: 1.15rem;
+	border-top: 1px solid color-mix(in srgb, var(--lw-color-primary) 12%, var(--lw-color-border));
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__slide.is-active {
+	display: grid;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop.lithia-tone-dark .lithia-service-spotlight-loop__slide {
+	border-top-color: color-mix(in srgb, var(--lw-color-dark-text) 14%, transparent);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__content {
+	display: grid;
+	gap: 0.85rem;
+	align-content: start;
+	min-width: 0;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__content > * {
+	margin: 0;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__service-eyebrow {
+	margin-bottom: 0.2rem;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__title {
+	font-size: clamp(1.55rem, 1.25rem + 1vw, 1.9rem);
+	line-height: 1.08;
+	letter-spacing: -0.02em;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__price {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	align-items: baseline;
+	margin: 0;
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__price-label {
+	font-size: var(--lw-font-size-small);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__price-value {
+	font-size: 1.2rem;
+	font-weight: var(--lw-font-weight-heading);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop.lithia-tone-dark .lithia-service-spotlight-loop__price {
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__text {
+	max-width: 52ch;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__media {
+	overflow: hidden;
+	border-radius: var(--lw-radius-lg);
+	min-height: 100%;
+	order: 2;
+	border: 1px solid color-mix(in srgb, var(--lw-color-primary) 10%, var(--lw-color-border));
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 5 / 4;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__details {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__detail {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	align-items: center;
+	padding: 0.45rem 0.8rem;
+	border: 1px solid color-mix(in srgb, var(--lw-color-primary) 18%, var(--lw-color-border));
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--lw-color-light-bg) 86%, var(--lw-color-surface));
+	font-size: var(--lw-font-size-small);
+	line-height: 1.4;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop.lithia-tone-dark .lithia-service-spotlight-loop__detail {
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 18%, transparent);
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 76%, var(--lw-color-secondary));
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__detail-label {
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop.lithia-tone-dark .lithia-service-spotlight-loop__detail-label {
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__actions {
+	margin-top: 0.35rem;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.9rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__nav {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7rem 1rem;
+	border: 1px solid var(--lw-color-border);
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__nav:hover {
+	border-color: var(--lw-color-primary);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__dots {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__dot {
+	width: 0.8rem;
+	height: 0.8rem;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--lw-color-primary) 22%, transparent);
+	cursor: pointer;
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__dot.is-active {
+	background: var(--lw-color-primary);
+}
+
+.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__empty {
+	max-width: 42rem;
+}
+
+@media (max-width: 780px) {
+	.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__slide,
+	.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__slide.is-active {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__media {
+		order: 0;
+	}
+
+	.wp-block-lithia-service-spotlight-loop.lithia-service-spotlight-loop .lithia-service-spotlight-loop__controls {
+		justify-content: center;
+	}
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__content,
+.wp-block-lithia-contact-form.lithia-contact-form .lithia-contact-form__content {
+	display: grid;
+	gap: var(--lw-block-gap);
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__content > *,
+.wp-block-lithia-contact-form.lithia-contact-form .lithia-contact-form__content > * {
+	margin: 0;
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: var(--lw-block-gap);
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__item {
+	display: grid;
+	gap: 0.45rem;
+	padding: 1rem 1.05rem;
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+	background: color-mix(in srgb, var(--lw-color-light-bg) 72%, var(--lw-color-surface));
+	min-width: 0;
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details.lithia-tone-dark .lithia-contact-details__item {
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 16%, transparent);
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 76%, var(--lw-color-secondary));
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__label {
+	margin-bottom: 0;
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__value {
+	max-width: none;
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__business-name {
+	display: inline-block;
+	margin-bottom: 0.35rem;
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details.lithia-tone-dark .lithia-contact-details__business-name {
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details address.lithia-contact-details__value {
+	font-style: normal;
+}
+
+.wp-block-lithia-contact-details.lithia-contact-details .lithia-contact-details__value a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.14em;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form .lithia-contact-form__form {
+	display: grid;
+	gap: 1rem;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder,
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__form,
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__fields-group,
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__row,
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__field-wrap {
+	display: grid;
+	gap: 0.8rem;
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form label {
+	color: inherit;
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
+	width: 100%;
+	max-width: 100%;
+	padding: 0.9rem 1rem;
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+	background: color-mix(in srgb, var(--lw-color-light-bg) 90%, var(--lw-color-surface));
+	color: var(--lw-color-text);
+	font: inherit;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form textarea {
+	min-height: 10rem;
+	resize: vertical;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select):focus {
+	outline: 2px solid color-mix(in srgb, var(--lw-color-accent) 70%, transparent);
+	outline-offset: 1px;
+	border-color: var(--lw-color-accent);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__submit {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	max-width: 100%;
+	padding: var(--lw-button-padding-y) var(--lw-button-padding-x);
+	border: 1px solid var(--lw-button-border);
+	border-radius: var(--lw-button-radius);
+	background: var(--lw-button-bg);
+	box-shadow: var(--lw-shadow-soft);
+	color: var(--lw-button-text);
+	font-size: var(--lw-button-font-size);
+	font-weight: var(--lw-button-font-weight);
+	line-height: 1.2;
+	cursor: pointer;
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form .jet-form-builder__submit:hover {
+	background: var(--lw-color-secondary);
+	border-color: var(--lw-color-secondary);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form.lithia-tone-dark :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
+	border-color: color-mix(in srgb, var(--lw-color-dark-text) 16%, transparent);
+	background: color-mix(in srgb, var(--lw-color-dark-bg) 82%, var(--lw-color-secondary));
+	color: var(--lw-color-dark-text);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form.lithia-tone-dark ::placeholder {
+	color: color-mix(in srgb, var(--lw-color-dark-text) 70%, transparent);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form.lithia-tone-dark .jet-form-builder__submit {
+	background: var(--lw-color-light-bg);
+	border-color: var(--lw-color-light-bg);
+	box-shadow: none;
+	color: var(--lw-color-dark-bg);
+}
+
+.wp-block-lithia-contact-form.lithia-contact-form.lithia-tone-dark .jet-form-builder__submit:hover {
+	background: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+	border-color: color-mix(in srgb, var(--lw-color-light-bg) 82%, var(--lw-color-accent));
+}
+
+.editor-styles-wrapper .lithia-brand-block-preview {
+	margin-top: var(--lw-block-gap);
+}
+
+.editor-styles-wrapper .lithia-mission-statement-editor-image {
+	margin-bottom: 1rem;
+	border-radius: var(--lw-radius-lg);
+	overflow: hidden;
+}
+
+.editor-styles-wrapper .lithia-about-summary-editor-image {
+	margin-bottom: 1rem;
+	border-radius: var(--lw-radius-lg);
+	overflow: hidden;
+}
+
+@media (max-width: 781px) {
+	.wp-block-lithia-mission-statement.lithia-mission-statement .lithia-mission-statement__inner.has-mission-image {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-lithia-about-summary.lithia-about-summary .lithia-about-summary__inner.has-about-image {
+		grid-template-columns: 1fr;
+	}
+}

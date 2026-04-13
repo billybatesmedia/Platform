@@ -1,0 +1,36 @@
+:where(body) {
+	background: var(--lw-color-background);
+	color: var(--lw-color-text);
+	font-family: var(--lw-font-body);
+	font-size: var(--lw-font-size-base);
+	line-height: var(--lw-line-height-body);
+}
+
+:where(body.editor-styles-wrapper),
+:where(.editor-styles-wrapper),
+:where(.editor-styles-wrapper .is-root-container) {
+	color: var(--lw-color-text);
+	font-family: var(--lw-font-body);
+	font-size: var(--lw-font-size-base);
+	font-weight: var(--lw-font-weight-body);
+	line-height: var(--lw-line-height-body);
+}
+
+:where(.editor-styles-wrapper .is-root-container) {
+	padding: var(--lw-section-padding-y) var(--lw-section-padding-x);
+}
+
+:where(.editor-styles-wrapper) :where(h1, h2, h3, h4, h5, h6, .wp-block-post-title, .wp-block-query-title) {
+	color: var(--lw-color-text);
+	font-family: var(--lw-font-heading);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+}
+
+:where(.editor-styles-wrapper) :where(p, li, dd, figcaption, cite, .wp-block-post-excerpt__excerpt) {
+	color: var(--lw-color-muted-text);
+}
+
+:where(.editor-styles-wrapper) :where(a) {
+	color: var(--lw-color-primary);
+}

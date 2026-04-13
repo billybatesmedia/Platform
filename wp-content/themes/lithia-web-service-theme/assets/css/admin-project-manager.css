@@ -1,0 +1,181 @@
+.lw-project-admin-page {
+	max-width: 1280px;
+}
+
+.lw-project-grid {
+	display: grid;
+	gap: 18px;
+	margin-top: 24px;
+}
+
+.lw-project-grid--stats {
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.lw-project-grid--two {
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.lw-project-grid--stack {
+	gap: 20px;
+}
+
+.lw-project-grid > .lw-project-field--full {
+	grid-column: 1 / -1;
+}
+
+.lw-project-panel {
+	display: grid;
+	gap: 18px;
+	padding: 24px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 16px;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.lw-project-panel--subtle {
+	padding: 20px;
+	background: #fbfbfc;
+	box-shadow: none;
+}
+
+.lw-project-panel__header {
+	display: grid;
+	gap: 6px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.lw-project-panel__header h2,
+.lw-project-panel__header h3 {
+	margin: 0;
+}
+
+.lw-project-panel__header p {
+	margin: 0;
+	color: #646970;
+}
+
+.lw-project-stat {
+	display: grid;
+	gap: 6px;
+	padding: 16px;
+	background: #fbfbfc;
+	border: 1px solid #dcdcde;
+	border-radius: 14px;
+}
+
+.lw-project-stat__label {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #646970;
+}
+
+.lw-project-stat__value {
+	font-size: 14px;
+	line-height: 1.45;
+	word-break: break-word;
+}
+
+.lw-project-field {
+	display: grid;
+	gap: 8px;
+}
+
+.lw-project-field input:not([type='checkbox']):not([type='radio']),
+.lw-project-field select,
+.lw-project-field textarea {
+	width: 100%;
+}
+
+.lw-project-field__label {
+	font-weight: 600;
+}
+
+.lw-project-inline-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: end;
+}
+
+.lw-project-inline-form .lw-project-field {
+	min-width: 220px;
+}
+
+.lw-project-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+}
+
+.lw-project-checkbox {
+	display: flex;
+	gap: 10px;
+	align-items: start;
+	color: #1d2327;
+}
+
+.lw-project-links-row,
+.lw-project-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.lw-project-issue-list {
+	margin: 0;
+	padding-left: 20px;
+	display: grid;
+	gap: 8px;
+}
+
+.lw-project-issue-list li {
+	display: grid;
+	gap: 4px;
+}
+
+.lw-project-offers-table textarea {
+	min-width: 180px;
+}
+
+.lw-project-faq-row {
+	padding: 18px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 12px;
+}
+
+.lw-project-table-wrap {
+	overflow-x: auto;
+}
+
+.lw-project-table-wrap table td,
+.lw-project-table-wrap table th {
+	vertical-align: top;
+}
+
+.lw-project-report pre {
+	max-height: 420px;
+	overflow: auto;
+	padding: 16px;
+	background: #0f1720;
+	border-radius: 12px;
+	color: #e7eef7;
+}
+
+@media (max-width: 782px) {
+	.lw-project-panel {
+		padding: 18px;
+	}
+
+	.lw-project-inline-form,
+	.lw-project-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}

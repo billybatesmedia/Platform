@@ -1,0 +1,766 @@
+/*
+Theme Name: Lithia Web Service Theme
+Theme URI: https://lithiaweb.com/
+Author: Lithia Web
+Author URI: https://lithiaweb.com/
+Description: A clean custom block theme for service businesses, booking flows, and standard WordPress pages.
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 8.1
+Version: 1.0.42
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lithia-web-service-theme
+Tags: block-theme, full-site-editing, custom-colors, custom-logo, featured-images, translation-ready, wide-blocks
+*/
+
+body {
+	background-color: var(--lw-color-background);
+	color: var(--lw-color-text);
+	font-family: var(--lw-font-body);
+	font-size: var(--lw-font-size-base);
+	font-weight: var(--lw-font-weight-body);
+	line-height: var(--lw-line-height-body);
+}
+
+.wp-site-blocks {
+	min-height: 100vh;
+}
+
+p,
+li,
+dd,
+figcaption,
+.wp-block-post-excerpt__excerpt {
+	color: var(--lw-color-muted-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--lw-color-primary);
+	font-family: var(--lw-font-heading);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: var(--lw-line-height-heading);
+	letter-spacing: -0.02em;
+}
+
+h1 {
+	font-size: var(--lw-font-size-h1);
+}
+
+h2 {
+	font-size: var(--lw-font-size-h2);
+}
+
+h3 {
+	font-size: var(--lw-font-size-h3);
+}
+
+small,
+.has-small-font-size {
+	font-size: var(--lw-font-size-small);
+}
+
+a {
+	color: var(--lw-color-primary);
+	text-decoration-color: color-mix(in srgb, var(--lw-color-primary) 35%, transparent);
+	transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+	color: var(--lw-color-secondary);
+	text-decoration-color: color-mix(in srgb, var(--lw-color-secondary) 42%, transparent);
+}
+
+.lithia-site-header {
+	position: sticky;
+	top: 0;
+	z-index: 30;
+	backdrop-filter: blur(18px);
+	background: var(--lw-header-blur-bg);
+	border-bottom: 1px solid var(--lw-color-border);
+}
+
+.lithia-site-header__inner,
+.lithia-site-footer__inner,
+.lithia-post-shell,
+.lithia-404-shell {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-inline: auto;
+}
+
+main.lithia-archive-shell,
+main.lithia-services-archive,
+main.lithia-docs-shell {
+	width: 100% !important;
+	max-width: 1120px !important;
+	margin-inline: auto !important;
+}
+
+.lithia-site-header__inner {
+	padding-block: clamp(0.9rem, 2vw, 1.15rem);
+}
+
+.lithia-site-header .wp-block-site-title,
+.lithia-site-footer .wp-block-site-title {
+	color: var(--lw-color-text);
+	font-family: var(--lw-font-body);
+	font-size: clamp(0.85rem, 0.82rem + 0.2vw, 0.95rem);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.lithia-site-header .wp-block-navigation-item__content {
+	color: var(--lw-color-text);
+	font-size: clamp(0.85rem, 0.82rem + 0.2vw, 0.95rem);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.02em;
+}
+
+.lithia-site-header__nav {
+	gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.lithia-services-dropdown-block,
+.lithia-services-dropdown-item {
+	position: relative;
+}
+
+.lithia-services-dropdown-item {
+	display: flex;
+	align-items: center;
+}
+
+.lithia-services-dropdown {
+	position: relative;
+}
+
+.lithia-services-dropdown__summary {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--lw-color-text);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.02em;
+	cursor: pointer;
+	list-style: none;
+}
+
+.lithia-services-dropdown__summary::-webkit-details-marker {
+	display: none;
+}
+
+.lithia-services-dropdown__summary::after {
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	border-right: 1.5px solid currentColor;
+	border-bottom: 1.5px solid currentColor;
+	transform: rotate(45deg) translateY(-1px);
+	transform-origin: center;
+	transition: transform 0.2s ease;
+}
+
+.lithia-services-dropdown[open] .lithia-services-dropdown__summary::after {
+	transform: rotate(-135deg) translateY(-1px);
+}
+
+.lithia-services-dropdown.is-current .lithia-services-dropdown__summary,
+.lithia-services-dropdown__summary:hover {
+	color: var(--lw-color-primary);
+}
+
+.lithia-services-dropdown__menu {
+	position: absolute;
+	top: calc(100% + 0.65rem);
+	right: 0;
+	z-index: 40;
+	display: grid;
+	gap: 0.2rem;
+	min-width: min(280px, calc(100vw - 2rem));
+	padding: 0.45rem;
+	background: color-mix(in srgb, var(--lw-color-light-bg) 96%, #ffffff);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+	box-shadow: var(--lw-shadow-panel);
+}
+
+.lithia-services-dropdown__link {
+	display: block;
+	padding: 0.55rem 0.7rem;
+	border-radius: calc(var(--lw-radius-sm) + 2px);
+	color: var(--lw-color-text);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-body);
+	line-height: 1.4;
+	text-decoration: none;
+}
+
+.lithia-services-dropdown__link:hover,
+.lithia-services-dropdown__link.is-current {
+	background: color-mix(in srgb, var(--lw-color-accent) 12%, var(--lw-color-light-bg));
+	color: var(--lw-color-primary);
+}
+
+.lithia-panel,
+.lithia-post-shell,
+.lithia-archive-shell,
+.lithia-404-shell {
+	background: var(--lw-color-surface);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-panel);
+}
+
+.lithia-post-shell,
+.lithia-archive-shell,
+.lithia-404-shell {
+	padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.4vw, 1.6rem);
+	margin-block: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.lithia-page-shell {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+main#wp--skip-link--target,
+main#wp--skip-link--target.lithia-page-shell {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lithia-page-shell > .wp-block-post-content,
+.lithia-page-shell > .entry-content.wp-block-post-content,
+main#wp--skip-link--target > .wp-block-post-content,
+main#wp--skip-link--target > .entry-content.wp-block-post-content {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+.lithia-page-shell > .wp-block-post-content.has-global-padding,
+.lithia-page-shell > .entry-content.wp-block-post-content.has-global-padding,
+main#wp--skip-link--target > .wp-block-post-content.has-global-padding,
+main#wp--skip-link--target > .entry-content.wp-block-post-content.has-global-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.lithia-page-shell .wp-block-post-content > *,
+.lithia-post-shell .wp-block-post-content > *,
+.lithia-archive-shell .wp-block-post-template > li > *,
+.entry-content > * {
+	max-width: 100%;
+}
+
+.lithia-page-shell > .wp-block-post-featured-image,
+.lithia-page-shell > .wp-block-post-title,
+.lithia-page-shell > .wp-block-post-content,
+.lithia-page-shell > .entry-content.wp-block-post-content {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-inline: auto;
+}
+
+.lithia-page-shell > .wp-block-post-featured-image {
+	margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.lithia-page-shell > .wp-block-post-featured-image img {
+	border-radius: var(--lw-radius-lg);
+}
+
+.lithia-page-shell > .wp-block-post-title {
+	width: min(1120px, calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-top: clamp(1.25rem, 2.6vw, 2rem);
+	font-size: clamp(2rem, 4.2vw, 3.35rem);
+	line-height: 1.02;
+}
+
+.lithia-page-shell > .wp-block-post-content,
+.lithia-page-shell > .entry-content.wp-block-post-content {
+	margin-block: clamp(1rem, 2.4vw, 1.75rem) clamp(2rem, 4vw, 3rem);
+}
+
+.lithia-page-shell > .wp-block-post-content > :where(:not(.alignwide):not(.alignfull)),
+.lithia-page-shell > .entry-content.wp-block-post-content > :where(:not(.alignwide):not(.alignfull)) {
+	max-width: min(var(--lw-content-width), 100%);
+	margin-inline: auto;
+}
+
+.lithia-service-page {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.lithia-service-page__intro,
+.lithia-service-page__content {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-inline: auto;
+}
+
+.lithia-service-page__intro {
+	display: grid;
+	gap: var(--lw-block-gap);
+	margin-block: var(--lw-section-padding-y) 0;
+}
+
+.lithia-service-page__intro .wp-block-post-title,
+.lithia-service-page__intro h1 {
+	margin: 0;
+}
+
+.lithia-service-page__content {
+	margin-block: var(--lw-section-padding-y);
+}
+
+.lithia-service-page__content > .wp-block-post-content,
+.lithia-service-page__content > .entry-content.wp-block-post-content {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+.lithia-service-page__content > .wp-block-post-content > :where(:not(.alignwide):not(.alignfull)),
+.lithia-service-page__content > .entry-content.wp-block-post-content > :where(:not(.alignwide):not(.alignfull)) {
+	max-width: min(var(--lw-content-width), 100%);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lithia-service-page__content > .wp-block-post-content > .alignwide,
+.lithia-service-page__content > .entry-content.wp-block-post-content > .alignwide {
+	max-width: var(--lw-wide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lithia-service-page__content > .wp-block-post-content > .alignfull,
+.lithia-service-page__content > .entry-content.wp-block-post-content > .alignfull {
+	max-width: none;
+}
+
+.lithia-archive-grid {
+	gap: var(--lw-block-gap);
+}
+
+.lithia-archive-card {
+	height: 100%;
+	padding: clamp(1rem, 1.8vw, 1.35rem);
+	background: color-mix(in srgb, var(--lw-color-surface) 86%, #ffffff);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+	box-shadow: var(--lw-shadow-soft);
+}
+
+.lithia-archive-card .wp-block-post-title,
+.lithia-services-feed-card .wp-block-post-title,
+.lithia-doc-card__title,
+.lithia-doc-shell .wp-block-post-title {
+	font-size: clamp(1.2rem, 2vw, 1.65rem);
+	line-height: 1.08;
+}
+
+.lithia-services-archive {
+	padding: clamp(1.75rem, 3vw, 3rem) var(--lw-section-padding-x) 0;
+}
+
+.lithia-services-archive__intro {
+	display: grid;
+	gap: 1rem;
+	margin-bottom: calc(var(--lw-block-gap) * 1.5);
+}
+
+.lithia-services-archive__intro > * {
+	margin: 0;
+}
+
+.lithia-services-feed {
+	margin-top: 0;
+}
+
+.lithia-services-feed__intro {
+	width: 100%;
+	max-width: var(--lw-wide-width);
+	margin: 0 auto clamp(1.5rem, 3vw, 2.4rem);
+	display: grid;
+	gap: 0.85rem;
+	justify-self: center;
+}
+
+.lithia-services-feed__intro > * {
+	margin: 0;
+}
+
+.lithia-services-feed__intro .lithia-copy {
+	padding-bottom: 60px;
+}
+
+.lithia-services-feed--home {
+	width: 100%;
+	max-width: var(--lw-wide-width);
+	margin-inline: auto;
+	justify-self: center;
+}
+
+.lithia-services-feed .wp-block-post-template {
+	display: grid;
+	gap: var(--lw-block-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lithia-services-feed .wp-block-post-template > li {
+	margin: 0;
+}
+
+.lithia-services-feed-card {
+	display: grid;
+	gap: 0.7rem;
+	align-content: start;
+	align-self: start;
+	height: 100%;
+	padding: clamp(1rem, 1.7vw, 1.35rem);
+	background: var(--lw-color-surface);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-panel);
+}
+
+.lithia-services-feed .lithia-services-feed-card {
+	padding: 15px;
+}
+
+.lithia-services-feed-card > * {
+	margin: 0;
+}
+
+.lithia-services-feed-card .wp-block-post-title {
+	margin: 0;
+	font-size: var(--lw-font-size-h3);
+}
+
+.lithia-services-feed-card .wp-block-post-title a {
+	color: var(--lw-color-primary);
+	text-decoration: none;
+}
+
+.lithia-services-feed-card .wp-block-post-title a:hover {
+	color: var(--lw-color-secondary);
+}
+
+.lithia-services-feed-card .wp-block-post-excerpt {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	height: 100%;
+	margin: 0;
+}
+
+.lithia-services-feed-card .wp-block-post-excerpt__excerpt {
+	margin: 0;
+	color: var(--lw-color-muted-text);
+}
+
+.lithia-services-feed-card .wp-block-post-excerpt__more-text {
+	margin: auto 0 0;
+}
+
+.lithia-services-feed-card .wp-block-post-excerpt__more-link {
+	color: var(--lw-color-primary);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.lithia-services-feed-card .wp-block-post-excerpt__more-link:hover {
+	color: var(--lw-color-secondary);
+}
+
+.lithia-services-feed__pagination {
+	margin-top: calc(var(--lw-section-padding-y) * 0.75);
+}
+
+.lithia-services-feed__pagination a {
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.lithia-docs-shell,
+.lithia-doc-shell {
+	margin-block: clamp(1.5rem, 3vw, 2.5rem);
+	padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.4vw, 1.6rem);
+	background: var(--lw-color-surface);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-panel);
+}
+
+.lithia-doc-shell {
+	width: min(var(--lw-wide-width), calc(100% - (var(--lw-section-padding-x) + var(--lw-section-padding-x))));
+	margin-inline: auto;
+}
+
+.lithia-docs-shell {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 1.5);
+}
+
+.lithia-docs-intro {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.lithia-docs-intro > * {
+	margin: 0;
+}
+
+.lithia-docs-grid {
+	margin-top: 0;
+}
+
+.lithia-docs-grid .wp-block-post-template {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--lw-block-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lithia-docs-grid .wp-block-post-template > li {
+	margin: 0;
+}
+
+.lithia-doc-card {
+	display: grid;
+	gap: 0.8rem;
+	align-content: start;
+	height: 100%;
+	padding: clamp(1rem, 1.7vw, 1.35rem);
+	background: color-mix(in srgb, var(--lw-color-surface) 88%, #ffffff);
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-soft);
+}
+
+.lithia-doc-card > *,
+.lithia-doc-hero > * {
+	margin: 0;
+}
+
+.lithia-doc-card__meta,
+.lithia-doc-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.lithia-doc-taxonomy,
+.lithia-doc-date {
+	font-size: var(--lw-font-size-small);
+	color: var(--lw-color-muted-text);
+}
+
+.lithia-doc-taxonomy a {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.35rem 0.65rem;
+	background: color-mix(in srgb, var(--lw-color-light-bg) 88%, #ffffff);
+	border: 1px solid var(--lw-color-border);
+	border-radius: 999px;
+	color: var(--lw-color-primary);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	line-height: 1.1;
+	text-decoration: none;
+}
+
+.lithia-doc-taxonomy--audience a {
+	background: color-mix(in srgb, var(--lw-color-accent) 12%, var(--lw-color-light-bg));
+}
+
+.lithia-doc-card__title,
+.lithia-doc-card__title a {
+	color: var(--lw-color-primary);
+	text-decoration: none;
+}
+
+.lithia-doc-card__title a:hover {
+	color: var(--lw-color-secondary);
+}
+
+.lithia-doc-card__excerpt {
+	display: grid;
+	gap: 0.8rem;
+	height: 100%;
+}
+
+.lithia-doc-card__excerpt .wp-block-post-excerpt__excerpt {
+	margin: 0;
+}
+
+.lithia-doc-card__excerpt .wp-block-post-excerpt__more-text {
+	margin-top: auto;
+}
+
+.lithia-doc-card__excerpt .wp-block-post-excerpt__more-link {
+	color: var(--lw-color-primary);
+	font-size: var(--lw-font-size-small);
+	font-weight: var(--lw-font-weight-heading);
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.lithia-doc-card__excerpt .wp-block-post-excerpt__more-link:hover {
+	color: var(--lw-color-secondary);
+}
+
+.lithia-doc-shell {
+	display: grid;
+	gap: calc(var(--lw-block-gap) * 1.5);
+}
+
+.lithia-doc-hero {
+	display: grid;
+	gap: 1rem;
+	padding-bottom: var(--lw-block-gap);
+	border-bottom: 1px solid var(--lw-color-border);
+}
+
+.lithia-doc-shell .wp-block-post-content > * {
+	max-width: min(var(--lw-content-width), 100%);
+	margin-inline: auto;
+}
+
+.lithia-doc-shell .wp-block-post-content > .alignwide,
+.lithia-doc-shell .wp-block-post-content > .alignfull {
+	max-width: none;
+}
+
+.lithia-site-footer {
+	padding-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.lithia-site-footer__inner {
+	padding: clamp(1.5rem, 3vw, 2.4rem) 0 0;
+	border-top: 1px solid var(--lw-color-border);
+}
+
+@media (max-width: 960px) {
+	.lithia-services-feed .wp-block-post-template {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.lithia-docs-grid .wp-block-post-template {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 781px) {
+	.lithia-site-header__nav {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.lithia-services-dropdown__menu {
+		position: static;
+		margin-top: 0.75rem;
+		min-width: 100%;
+	}
+
+	.lithia-services-feed .wp-block-post-template {
+		grid-template-columns: 1fr;
+	}
+}
+
+.wp-block-button__link,
+a.wp-block-button__link,
+.wp-element-button.wp-block-button__link,
+button,
+input[type="submit"],
+.wc-block-components-button,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	padding: var(--lw-button-padding-y) var(--lw-button-padding-x);
+	border: 1px solid var(--lw-button-border);
+	border-radius: var(--lw-button-radius);
+	background: var(--lw-button-bg);
+	box-shadow: var(--lw-shadow-soft);
+	color: var(--lw-button-text);
+	font-size: var(--lw-button-font-size);
+	font-weight: var(--lw-button-font-weight);
+	line-height: 1.2;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.wp-block-button__link:hover,
+a.wp-block-button__link:hover,
+.wp-element-button.wp-block-button__link:hover,
+button:hover,
+input[type="submit"]:hover,
+.wc-block-components-button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+	background: var(--lw-color-secondary);
+	border-color: var(--lw-color-secondary);
+	color: var(--lw-button-text);
+	transform: translateY(-1px);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+textarea,
+select {
+	min-height: 44px;
+	padding: 0.75rem 0.95rem;
+	border: 1px solid var(--lw-color-border);
+	border-radius: var(--lw-radius-md);
+	background: color-mix(in srgb, var(--lw-color-light-bg) 92%, #ffffff);
+	color: var(--lw-color-text);
+	font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 2px solid color-mix(in srgb, var(--lw-color-primary) 24%, transparent);
+	outline-offset: 1px;
+	border-color: color-mix(in srgb, var(--lw-color-primary) 34%, var(--lw-color-border));
+}
+
+.jet-form-builder__field-wrap,
+.woocommerce form .form-row {
+	margin-bottom: var(--lw-block-gap);
+}
+
+.wp-block-post-featured-image img {
+	border-radius: var(--lw-radius-lg);
+	box-shadow: var(--lw-shadow-soft);
+}

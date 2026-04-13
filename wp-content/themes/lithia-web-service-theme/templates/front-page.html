@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"lithia-home-shell","layout":{"type":"default"}} -->
+<main class="wp-block-group lithia-home-shell">
+	<!-- wp:lithia/business-hero {"tone":"dark","useBusinessName":true,"useCity":true} /-->
+
+	<!-- wp:lithia/service-spotlight-loop {"tone":"light","showArchiveCta":true,"archiveLabel":"View All Services","archiveUrl":"/services/"} /-->
+
+	<!-- wp:query {"queryId":21,"query":{"perPage":6,"pages":0,"offset":0,"postType":"services","order":"asc","orderBy":"menu_order","inherit":false},"displayLayout":{"type":"grid","columns":3},"className":"lithia-services-feed lithia-services-feed--home"} -->
+	<div class="wp-block-query lithia-services-feed lithia-services-feed--home">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+			<!-- wp:group {"className":"lithia-services-feed-card","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group lithia-services-feed-card">
+				<!-- wp:post-title {"isLink":true,"level":3,"className":"lithia-services-feed-card__title"} /-->
+				<!-- wp:post-excerpt {"moreText":"View Service","excerptLength":26,"className":"lithia-services-feed-card__excerpt"} /-->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+	</div>
+	<!-- /wp:query -->
+
+	<!-- wp:lithia/mission-statement {"tone":"dark","label":"How We Work"} /-->
+
+	<!-- wp:lithia/about-summary {"tone":"light","showButton":true,"buttonLabel":"View Services","buttonUrl":"/services/"} /-->
+
+	<!-- wp:lithia/brand-cta-pair {"tone":"dark","showPrimaryCta":true,"showSecondaryCta":true,"primaryLabel":"Book Appointment","primaryUrl":"/book-appointment/","secondaryLabel":"Contact Us","secondaryUrl":"/contact/"} /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

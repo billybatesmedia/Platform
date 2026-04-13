@@ -1,0 +1,23 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"lithia-doc-shell","layout":{"type":"constrained"}} -->
+<main class="wp-block-group lithia-doc-shell">
+	<!-- wp:group {"className":"lithia-doc-hero","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group lithia-doc-hero">
+		<!-- wp:post-title {"level":1} /-->
+		<!-- wp:group {"className":"lithia-doc-meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group lithia-doc-meta">
+			<!-- wp:post-terms {"term":"site_doc_type","prefix":"Type: ","className":"lithia-doc-taxonomy lithia-doc-taxonomy--type"} /-->
+			<!-- wp:post-terms {"term":"site_doc_audience","prefix":"Audience: ","className":"lithia-doc-taxonomy lithia-doc-taxonomy--audience"} /-->
+			<!-- wp:post-date {"fontSize":"xs","className":"lithia-doc-date"} /-->
+		</div>
+		<!-- /wp:group -->
+		<!-- wp:post-excerpt /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

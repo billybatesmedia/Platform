@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"lithia-archive-shell","layout":{"type":"constrained"}} -->
+<main class="wp-block-group lithia-archive-shell">
+	<!-- wp:heading {"level":1,"fontSize":"xl"} -->
+	<h1 class="wp-block-heading has-xl-font-size">Latest Updates</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"displayLayout":{"type":"list"},"className":"lithia-archive-grid"} -->
+	<div class="wp-block-query lithia-archive-grid">
+		<!-- wp:post-template -->
+			<!-- wp:group {"className":"lithia-archive-card","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group lithia-archive-card">
+				<!-- wp:post-title {"isLink":true,"fontSize":"lg"} /-->
+				<!-- wp:post-date {"fontSize":"xs"} /-->
+				<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
