@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Local-only/site runtime config
+local-xdebuginfo.php
+wp-config.php
+
+# WordPress core and runtime content
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/mu-plugins/
+wp-content/uploads/
+wp-content/ai1wm-backups/
+wp-content/themes/twentytwentyfive/
+
+# Packaged artifacts
+*.zip
+*.crdownload
+
+# Generated evidence/build artifacts
+Docs/template-system/backups/
+Docs/template-system/release-packets/
+Docs/template-system/evidence/*.json
+Docs/template-system/evidence/*.tsv
+Docs/template-system/evidence/*.marker
+Docs/template-system/evidence/*window-*.txt
+Docs/template-system/evidence/*new-fatal-files.txt
+Docs/template-system/evidence/*summary.tsv
+
