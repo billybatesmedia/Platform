@@ -120,6 +120,9 @@ Supporting docs:
 - Operator checklist: `Docs/template-system/OPERATOR-CHECKLIST.md`
 - V1 done criteria: `Docs/template-system/V1-DEFINITION-OF-DONE.md`
 - Starter payload: `Docs/template-system/sample-payloads/service-business-v1-starter.json`
+- CSV import runbook: `Docs/template-system/CSV-IMPORT-RUNBOOK.md`
+- CSV to payload map: `Docs/template-system/CSV-PAYLOAD-MAPPING.md`
+- Starter CSV pack: `Docs/template-system/sample-csv/`
 - Site docs runbook (`/site-docs/`): `Docs/template-system/SITE-DOCS-RUNBOOK.md`
 
 This keeps V1 internal-assisted and avoids pretending the system is already a full client-facing portal.

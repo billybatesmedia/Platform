@@ -63,6 +63,12 @@ git log --oneline --decorate -n 8
 - Runbook: `Docs/template-system/SITE-DOCS-RUNBOOK.md`
 - Content model: `wp-content/themes/lithia-web-service-theme/inc/site-docs.php`
 
+## CSV Testing Workflow
+
+- Runbook: `Docs/template-system/CSV-IMPORT-RUNBOOK.md`
+- Mapping table: `Docs/template-system/CSV-PAYLOAD-MAPPING.md`
+- Starter templates: `Docs/template-system/sample-csv/`
+
 ## Migration Utilities
 
 - Service meta backfill (dry-run):

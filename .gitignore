@@ -20,8 +20,12 @@
 !/Docs/template-system/OPERATOR-CHECKLIST.md
 !/Docs/template-system/SERVICE-NAMING-CUT-LIST.md
 !/Docs/template-system/SITE-DOCS-RUNBOOK.md
+!/Docs/template-system/CSV-IMPORT-RUNBOOK.md
+!/Docs/template-system/CSV-PAYLOAD-MAPPING.md
 !/Docs/template-system/sample-payloads/
 !/Docs/template-system/sample-payloads/**
+!/Docs/template-system/sample-csv/
+!/Docs/template-system/sample-csv/**
 !/Docs/template-system/evidence/
 /Docs/template-system/evidence/*
 !/Docs/template-system/evidence/README.md

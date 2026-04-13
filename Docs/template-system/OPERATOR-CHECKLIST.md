@@ -61,6 +61,19 @@ Use this sequence when validating a brand-new site creation cycle end-to-end:
 
 Important: release suites expect `review_state = launched`. Running release checks while still `imported` will fail launch-state gates.
 
+## CSV Intake Variant (Optional)
+
+Use this when intake starts in spreadsheets:
+
+1. Fill the CSV pack in `Docs/template-system/sample-csv/`.
+2. Use `Docs/template-system/CSV-PAYLOAD-MAPPING.md` to map CSV columns to canonical payload fields.
+3. Assemble/update the canonical payload JSON.
+4. Continue through the standard import + QA flow above.
+
+Reference runbook:
+
+- `Docs/template-system/CSV-IMPORT-RUNBOOK.md`
+
 ## QA
 
 1. Review the homepage, About, Contact, booking page, and service pages.
